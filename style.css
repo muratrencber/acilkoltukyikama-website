@@ -1,7 +1,5 @@
 body
 {
-    background: rgb(131,58,180);
-    background: linear-gradient(30deg, rgba(182,52,41,1) 0%, rgba(209,117,87,1) 100%);
     font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
     margin: 0;
     width: 100%;
@@ -25,30 +23,67 @@ body
 {
     padding: 1em;
     margin-top: 4em;
-    color: white;
+    color: #343434;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.logo
+{
+    font-weight: lighter;
+}
+.logo strong
+{
+    font-weight: bold;
+}
+.background-img
+{
+    position: absolute;
+    max-width: 100%;
+}
+.background-img.tl
+{
+    top: 0;
+    left: 0;
+    z-index: -2;
+    max-height: 700px;
+}
+.background-img.br
+{
+    bottom:0;
+    right: 0;
+    z-index: -1;
+    max-height: 750px
+}
+img.amblem
+{
+    height: 8em;
 }
 .hero h1
 {
     margin-top: 0;
     text-align: center;
     font-size: 4em;
-    margin-bottom: 0.1em;
+    margin-bottom: 0;
 }
 .hero .description
 {
+    margin-top: 0;
+    margin-bottom: 2em;
     font-size: 1.1em;
     text-align: center;
 }
 .hero .buttons
 {
     display: flex;
+    flex-direction: column;
+    gap: 0.8em;
     justify-content: center;
+    align-items: stretch;
 }
-.wp-button
+.gradient-button
 {
+    color: white;
     text-align: center;
     position: relative;
     transition: 0.5s ease-in-out;
@@ -56,7 +91,7 @@ body
     font-size: 1.5em;
     border: 0px solid;
 }
-.wp-button .gradient
+.gradient-button .gradient
 {
     transition: 0.5s;
     position: absolute;
@@ -64,24 +99,48 @@ body
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(41,182,62,1) 0%, rgba(87,209,99,1) 100%);
+    background: linear-gradient(90deg, rgba(182,182,182,1) 0%, rgba(209,209,209,1) 100%);
     border-radius: 0.4em;
     opacity: 1;
     border: 0;
 }
-.wp-button .gradient.hover
+.gradient-button .gradient.hover
+{
+    background: linear-gradient(90deg, rgba(209,209,209,1) 0%, rgba(209,209,209,1) 100%);
+}
+.gradient-button.wp .gradient
+{
+    background: linear-gradient(90deg, rgba(41,182,62,1) 0%, rgba(87,209,99,1) 100%);
+}
+.gradient-button.wp .gradient.hover
 {
     background: linear-gradient(90deg, rgba(87,209,99,1) 0%, rgba(87,209,99,1) 100%);
 }
-.wp-button:hover
+.gradient-button.insta .gradient
+{
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.gradient-button.insta .gradient.hover
+{
+    background: linear-gradient(45deg, #fd1d1d, #e1306c, #c13584, #c13584, #e1306c, #fd1d1d);
+}
+.gradient-button.fb .gradient
+{
+    background: linear-gradient(90deg, #19aafd 0%, #0269e2 100%);
+}
+.gradient-button.fb .gradient.hover
+{
+    background: linear-gradient(90deg, #19aafd 0%, #19aafd 100%);
+}
+.gradient-button:hover
 {
     transform: scale(1.05);
 }
-.wp-button:hover .gradient.normal
+.gradient-button:hover .gradient.normal
 {
     opacity: 0;
 }
-.wp-button .container
+.gradient-button .container
 {
     width: 100%;
     height: 100%;
@@ -93,45 +152,53 @@ body
     justify-content: center;
     align-items: center;
 }
-.wp-button img
+.gradient-button img
 {
     width: 1.5em;
     height: 1.5em;
     margin-right: 0.5em;
 }
-.wp-button
+.gradient-button
 {
     cursor: pointer;
 }
-.wp-button p
+.gradient-button p
 {
     margin: 0;
     padding: 0;
 }
-.wp-button p, .wp-button img
+.gradient-button p, .gradient-button img
 {
     pointer-events: none;
     user-select: none;
 }
 footer
 {
-    background-color: #00000088;
     height: 3em;
     width: 100%;
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content:end;
     align-items: center;
 }
 footer a
 {
     text-decoration: underline;
     color: whitesmoke;
+    margin-right: 2em;
 }
 
 @media (orientation: portrait) {
     body
     {
         font-size: 2.2em;
+    }
+    h1.logo
+    {
+        font-size: 3em;
+    }
+    .background-img.br
+    {
+        max-height: 100%;
     }
 }
