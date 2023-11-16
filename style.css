@@ -133,6 +133,14 @@ img.amblem
 {
     background: linear-gradient(90deg, #19aafd 0%, #19aafd 100%);
 }
+.gradient-button.tiktok .gradient
+{
+    background: linear-gradient(90deg, #fe2c55 0%, #25f4ee 100%);
+}
+.gradient-button.tiktok .gradient.hover
+{
+    background: linear-gradient(90deg, #fe2c55 0%, #343434 100%);
+}
 .gradient-button.mail
 {
     color:#343434;
