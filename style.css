@@ -90,6 +90,7 @@ img.amblem
     padding: 0.5em;
     font-size: 1.5em;
     border: 0px solid;
+    border-radius: 0.4em;
 }
 .gradient-button .gradient
 {
@@ -132,6 +133,10 @@ img.amblem
 {
     background: linear-gradient(90deg, #19aafd 0%, #19aafd 100%);
 }
+.gradient-button.mail
+{
+    color:#343434;
+}
 .gradient-button:hover
 {
     transform: scale(1.05);
@@ -149,8 +154,8 @@ img.amblem
     position: relative;
     top: 0;
     left: 0;
-    justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .gradient-button img
 {
@@ -166,6 +171,7 @@ img.amblem
 {
     margin: 0;
     padding: 0;
+    flex: 1;
 }
 .gradient-button p, .gradient-button img
 {
